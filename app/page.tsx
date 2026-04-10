@@ -32,9 +32,9 @@ export default function Home() {
         aria-hidden
       />
 
-      <main className="relative z-10 flex flex-1 flex-col px-5 pb-10 pt-14 md:px-10 md:pt-20">
+      <main className="relative z-10 flex flex-1 flex-col px-5 pb-10 pt-6 md:px-10 md:pt-10">
         <header className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-          <div className="relative mb-12 h-[11rem] w-full max-w-[min(100%,42rem)] md:mb-16 md:h-[18rem] md:max-w-[52rem]">
+          <div className="relative mb-5 h-[8rem] w-full max-w-[min(100%,44rem)] md:mb-7 md:h-[12rem] md:max-w-[54rem]">
             <Image
               src="/fimass-logo.svg"
               alt="FIMASS"
@@ -47,13 +47,13 @@ export default function Home() {
           <h1 className="text-[1.65rem] font-semibold tracking-tight text-[var(--fimass-navy)] md:text-4xl md:tracking-tight">
             Benvenuto in FIMASS
           </h1>
-          <p className="mt-3 max-w-xl text-base leading-relaxed text-[var(--muted)] md:mt-4 md:text-lg">
+          <p className="mt-2 max-w-xl text-base leading-relaxed text-[var(--muted)] md:mt-3 md:text-lg">
             Seleziona l’area di accesso di tuo interesse
           </p>
         </header>
 
         <section
-          className="mx-auto mt-12 grid w-full max-w-4xl flex-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8 md:items-stretch"
+          className="mx-auto mt-8 grid w-full max-w-4xl flex-1 gap-6 md:mt-10 md:grid-cols-2 md:gap-8 md:items-stretch"
           aria-label="Aree di accesso"
         >
           {AREAS.map(({ href, description, logoSrc, logoAlt }) => (
@@ -65,7 +65,7 @@ export default function Home() {
               className="group flex flex-col items-center rounded-2xl border border-slate-200/90 bg-white/90 p-7 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-slate-200 hover:shadow-[0_12px_40px_-8px_rgba(15,39,68,0.14),0_4px_12px_-2px_rgba(15,39,68,0.06)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] md:p-8"
             >
               <div className="mb-6 flex w-full justify-center md:mb-7">
-                <div className="h-28 w-full max-w-[min(100%,22rem)] rounded-xl bg-black p-4 md:h-36 md:max-w-[26rem] md:p-5">
+                <div className="h-36 w-full max-w-[min(100%,24rem)] rounded-xl p-4 md:h-44 md:max-w-[28rem] md:p-5">
                   <div className="relative h-full w-full">
                     <Image
                       src={logoSrc}
