@@ -12,14 +12,14 @@ const AREAS: AreaCard[] = [
     description:
       "Accedi al gestionale per i servizi assicurativi per richiedere preventivi e polizze assicurative",
     href: "https://landing-page-fimass.vercel.app/",
-    logoSrc: "/fimass-assicurativo.png",
+    logoSrc: "/fimass-assicurativo.svg",
     logoAlt: "FIMASS Assicurativo",
   },
   {
     description:
       "Accedi al gestionale per richiedere mutui, prestiti personali e finanziamenti",
     href: "https://www.sportelloamicoimpresa.info/area_finanziamenti/login.php",
-    logoSrc: "/fimass-finanziario.png",
+    logoSrc: "/fimass-finanziario.svg",
     logoAlt: "FIMASS Finanziario",
   },
 ];
@@ -33,15 +33,15 @@ export default function Home() {
       />
 
       <main className="relative z-10 flex flex-1 flex-col px-5 pb-10 pt-6 md:px-10 md:pt-10">
-        <header className="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
-          <div className="relative mb-5 h-[11rem] w-full max-w-[min(100%,52rem)] md:mb-7 md:h-[18rem] md:max-w-[58rem]">
+        <header className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
+          <div className="relative mb-1 h-[16rem] w-full max-w-[min(100%,64rem)] md:mb-2 md:h-[28rem] md:max-w-[min(100%,76rem)]">
             <Image
               src="/fimass-logo.svg"
               alt="FIMASS"
               fill
               className="object-contain object-center"
               priority
-              sizes="(max-width: 768px) min(100vw, 832px), 928px"
+              sizes="(max-width: 768px) min(100vw, 1024px), 1216px"
             />
           </div>
           <h1 className="text-[1.65rem] font-semibold tracking-tight text-[var(--fimass-navy)] md:text-4xl md:tracking-tight">
