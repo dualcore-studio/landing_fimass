@@ -13,7 +13,7 @@ const AREAS: AreaCard[] = [
     titleLine: "GESTIONALE",
     titleAccent: "ASSICURATIVO",
     description:
-      "Preventivi, polizze e pratiche assicurative in un’unica area riservata.",
+      "Area riservata per preventivi, polizze, rinnovi e gestione delle pratiche assicurative. Accedi in pochi clic ai servizi FIMASS Assicurativo e tieni sotto controllo documenti, richieste e comunicazioni con lo sportello.",
     href: "https://landing-page-fimass.vercel.app/",
     linkLabel: "Gestionale assicurativo",
   },
@@ -21,7 +21,7 @@ const AREAS: AreaCard[] = [
     titleLine: "GESTIONALE",
     titleAccent: "FINANZIARIO",
     description:
-      "Mutui, prestiti e finanziamenti con strumenti dedicati e supporto operativo.",
+      "Mutui, prestiti personali e finanziamenti in un ambiente dedicato e sicuro. Utilizza gli strumenti FIMASS Finanziario per inoltrare richieste, caricare documentazione e seguire l’evoluzione delle pratiche fino all’esito.",
     href: "https://www.sportelloamicoimpresa.info/area_finanziamenti/login.php",
     linkLabel: "Gestionale finanziario",
   },
@@ -70,20 +70,20 @@ export default function Home() {
               key={href}
               className="flex aspect-[4/3] min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:px-5 md:py-4"
             >
-              <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-2.5 px-1 md:gap-3">
-                <h2 className="max-w-[16rem] text-balance sm:max-w-none">
-                  <span className="block text-[0.6875rem] font-semibold uppercase leading-tight tracking-[0.14em] text-[var(--muted)] sm:text-xs md:text-[0.8125rem]">
+              <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-0.5 md:gap-4">
+                <h2 className="w-full max-w-none text-balance">
+                  <span className="block text-xs font-bold uppercase leading-none tracking-[0.18em] text-[var(--fimass-navy)]/80 sm:text-sm md:text-base">
                     {titleLine}
                   </span>
-                  <span className="mt-1 block bg-gradient-to-r from-[var(--fimass-navy)] via-[var(--fimass-accent)] to-[var(--fimass-gold)] bg-clip-text text-lg font-bold uppercase tracking-tight text-transparent sm:text-xl md:text-2xl">
+                  <span className="mt-2 block bg-gradient-to-r from-[var(--fimass-navy)] via-[var(--fimass-accent)] to-[var(--fimass-gold)] bg-clip-text text-2xl font-extrabold uppercase tracking-tight text-transparent sm:mt-2.5 sm:text-3xl md:mt-3 md:text-4xl">
                     {titleAccent}
                   </span>
                 </h2>
-                <p className="w-full max-w-sm px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
+                <p className="w-full max-w-[22rem] text-sm leading-relaxed text-[var(--muted)] sm:max-w-md sm:text-[0.9375rem] md:text-base">
                   {description}
                 </p>
               </div>
-              <div className="flex shrink-0 justify-center pt-6 md:pt-8">
+              <div className="flex shrink-0 justify-center pt-5 md:pt-6">
                 <a
                   href={href}
                   target="_blank"
