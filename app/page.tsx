@@ -52,7 +52,7 @@ export default function Home() {
         </header>
 
         <section
-          className="grid w-full max-w-4xl shrink-0 gap-2.5 md:grid-cols-2 md:gap-3.5"
+          className="mx-auto grid w-full max-w-[min(100%,38rem)] shrink-0 gap-3 sm:max-w-4xl md:grid-cols-2 md:gap-4"
           aria-label="Aree di accesso"
         >
           {AREAS.map(({ href, description, logoSrc, logoAlt }) => (
@@ -61,22 +61,22 @@ export default function Home() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center rounded-2xl border border-slate-200/90 bg-white/90 px-5 py-3.5 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-slate-200 hover:shadow-[0_12px_40px_-8px_rgba(15,39,68,0.14),0_4px_12px_-2px_rgba(15,39,68,0.06)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] md:px-6 md:py-4"
+              className="group flex aspect-square min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-4 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-slate-200 hover:shadow-[0_12px_40px_-8px_rgba(15,39,68,0.14),0_4px_12px_-2px_rgba(15,39,68,0.06)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] md:px-5 md:py-5"
             >
-              <div className="mb-2 flex w-full justify-center bg-transparent md:mb-2.5">
+              <div className="flex w-full shrink-0 justify-center bg-transparent">
                 <Image
                   src={logoSrc}
                   alt={logoAlt}
                   width={2000}
                   height={604}
-                  className="h-auto max-h-[4.5rem] w-full max-w-[20rem] object-contain object-center md:max-h-[5rem] md:max-w-[22rem]"
-                  sizes="(max-width: 768px) 20rem, 22rem"
+                  className="h-auto max-h-[3.75rem] w-full max-w-[16rem] object-contain object-center md:max-h-[4.25rem] md:max-w-[18rem]"
+                  sizes="(max-width: 768px) 16rem, 18rem"
                 />
               </div>
-              <p className="flex-1 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
+              <p className="flex min-h-0 w-full flex-1 items-center justify-center px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
                 {description}
               </p>
-              <span className="mt-2.5 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 ease-out group-hover:bg-[var(--fimass-navy-light)] group-hover:shadow-lg md:mt-3">
+              <span className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 ease-out group-hover:bg-[var(--fimass-navy-light)] group-hover:shadow-lg">
                 Accedi
                 <span
                   className="inline-block transition-transform duration-300 group-hover:translate-x-0.5"
