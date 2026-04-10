@@ -35,10 +35,10 @@ export default function Home() {
       <main className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center gap-1.5 px-5 py-1 md:gap-2 md:px-10 md:py-2">
         <header className="flex w-full shrink-0 flex-col items-center text-center">
           <Image
-            src="/fimass-hero-brand.png"
+            src="/fimass-finale.svg"
             alt="FIMASS — by Sportello Amico, servizi per la famiglia e l'azienda"
-            width={580}
-            height={128}
+            width={457}
+            height={180}
             priority
             className="block h-auto w-full max-w-[min(100%,22rem)] object-contain object-center sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[36rem]"
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 26rem, (max-width: 1024px) 32rem, 36rem"
