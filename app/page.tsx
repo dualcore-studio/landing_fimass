@@ -56,12 +56,9 @@ export default function Home() {
           aria-label="Aree di accesso"
         >
           {AREAS.map(({ href, description, logoSrc, logoAlt }) => (
-            <a
+            <article
               key={href}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex aspect-[4/3] min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-slate-200 hover:shadow-[0_12px_40px_-8px_rgba(15,39,68,0.14),0_4px_12px_-2px_rgba(15,39,68,0.06)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] md:px-5 md:py-4"
+              className="flex aspect-[4/3] min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:px-5 md:py-4"
             >
               <div className="flex w-full shrink-0 justify-center bg-transparent">
                 <Image
@@ -76,7 +73,13 @@ export default function Home() {
               <p className="flex min-h-0 w-full flex-1 items-center justify-center px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
                 {description}
               </p>
-              <span className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 ease-out group-hover:bg-[var(--fimass-navy-light)] group-hover:shadow-lg">
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Accedi — ${logoAlt}`}
+                className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2 text-sm font-medium text-white shadow-md outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:bg-[var(--fimass-navy-light)] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
+              >
                 Accedi
                 <span
                   className="inline-block transition-transform duration-300 group-hover:translate-x-0.5"
@@ -84,8 +87,8 @@ export default function Home() {
                 >
                   →
                 </span>
-              </span>
-            </a>
+              </a>
+            </article>
           ))}
         </section>
       </main>
