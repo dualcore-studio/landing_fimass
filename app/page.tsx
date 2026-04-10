@@ -10,20 +10,20 @@ type AreaCard = {
 
 const AREAS: AreaCard[] = [
   {
-    titleLine: "PORTALE FIMASS",
-    titleAccent: "Assicurativo",
+    titleLine: "GESTIONALE",
+    titleAccent: "ASSICURATIVO",
     description:
       "Preventivi, polizze e pratiche assicurative in un’unica area riservata.",
     href: "https://landing-page-fimass.vercel.app/",
-    linkLabel: "PORTALE FIMASS Assicurativo",
+    linkLabel: "Gestionale assicurativo",
   },
   {
-    titleLine: "PORTALE FIMASS",
-    titleAccent: "Finanziario",
+    titleLine: "GESTIONALE",
+    titleAccent: "FINANZIARIO",
     description:
       "Mutui, prestiti e finanziamenti con strumenti dedicati e supporto operativo.",
     href: "https://www.sportelloamicoimpresa.info/area_finanziamenti/login.php",
-    linkLabel: "PORTALE FIMASS Finanziario",
+    linkLabel: "Gestionale finanziario",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function Home() {
               key={href}
               className="flex aspect-[4/3] min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:px-5 md:py-4"
             >
-              <div className="flex min-h-0 flex-1 flex-col items-center justify-center px-1">
+              <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-2.5 px-1 md:gap-3">
                 <h2 className="max-w-[16rem] text-balance sm:max-w-none">
                   <span className="block text-[0.6875rem] font-semibold uppercase leading-tight tracking-[0.14em] text-[var(--muted)] sm:text-xs md:text-[0.8125rem]">
                     {titleLine}
@@ -79,11 +79,11 @@ export default function Home() {
                     {titleAccent}
                   </span>
                 </h2>
-              </div>
-              <div className="flex shrink-0 flex-col items-center gap-4 md:gap-5">
                 <p className="w-full max-w-sm px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
                   {description}
                 </p>
+              </div>
+              <div className="flex shrink-0 justify-center pt-6 md:pt-8">
                 <a
                   href={href}
                   target="_blank"
