@@ -35,13 +35,13 @@ export default function Home() {
       <main className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center gap-1.5 px-5 py-1 md:gap-2 md:px-10 md:py-2">
         <header className="flex w-full shrink-0 flex-col items-center text-center">
           <Image
-            src="/fimass-logo.svg"
-            alt="FIMASS"
-            width={1761}
-            height={670}
+            src="/fimass-hero-brand.png"
+            alt="FIMASS — by Sportello Amico, servizi per la famiglia e l'azienda"
+            width={580}
+            height={128}
             priority
-            className="block h-auto max-h-[7rem] w-full max-w-[22rem] object-contain md:max-h-[8.5rem] md:max-w-[30rem] lg:max-h-[9.5rem] lg:max-w-[34rem]"
-            sizes="(max-width: 768px) 22rem, (max-width: 1024px) 30rem, 34rem"
+            className="block h-auto w-full max-w-[min(100%,22rem)] object-contain object-center sm:max-w-[26rem] md:max-w-[32rem] lg:max-w-[36rem]"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 26rem, (max-width: 1024px) 32rem, 36rem"
           />
           <h1 className="mt-1 text-lg font-semibold tracking-tight text-[var(--fimass-navy)] md:mt-1.5 md:text-2xl lg:text-3xl">
             Benvenuto in FIMASS
