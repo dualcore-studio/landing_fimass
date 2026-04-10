@@ -33,15 +33,15 @@ export default function Home() {
       />
 
       <main className="relative z-10 flex flex-1 flex-col px-5 pb-10 pt-6 md:px-10 md:pt-10">
-        <header className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-          <div className="relative mb-5 h-[8rem] w-full max-w-[min(100%,44rem)] md:mb-7 md:h-[12rem] md:max-w-[54rem]">
+        <header className="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+          <div className="relative mb-5 h-[11rem] w-full max-w-[min(100%,52rem)] md:mb-7 md:h-[18rem] md:max-w-[58rem]">
             <Image
               src="/fimass-logo.svg"
               alt="FIMASS"
               fill
               className="object-contain object-center"
               priority
-              sizes="(max-width: 768px) 672px, 832px"
+              sizes="(max-width: 768px) min(100vw, 832px), 928px"
             />
           </div>
           <h1 className="text-[1.65rem] font-semibold tracking-tight text-[var(--fimass-navy)] md:text-4xl md:tracking-tight">
