@@ -16,7 +16,9 @@ export const metadata: Metadata = {
   title: "FIMASS — Accesso ai servizi",
   description:
     "Portale di accesso alle aree FIMASS Assicurativo e FIMASS Finanziario.",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [
+    { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
+  ],
 };
 
 export default function RootLayout({
