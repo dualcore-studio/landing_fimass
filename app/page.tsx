@@ -32,18 +32,17 @@ export default function Home() {
         aria-hidden
       />
 
-      <main className="relative z-10 flex flex-1 flex-col px-5 pb-10 pt-6 md:px-10 md:pt-10">
+      <main className="relative z-10 flex flex-1 flex-col px-5 pb-10 pt-4 md:px-10 md:pt-6">
         <header className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
-          <div className="relative mb-1 h-[16rem] w-full max-w-[min(100%,64rem)] md:mb-2 md:h-[28rem] md:max-w-[min(100%,76rem)]">
-            <Image
-              src="/fimass-logo.svg"
-              alt="FIMASS"
-              fill
-              className="object-contain object-center"
-              priority
-              sizes="(max-width: 768px) min(100vw, 1024px), 1216px"
-            />
-          </div>
+          <Image
+            src="/fimass-logo.svg"
+            alt="FIMASS"
+            width={1808}
+            height={713}
+            priority
+            className="mb-1 h-auto w-full max-w-[min(100%,58rem)] object-contain object-center md:mb-1.5 md:max-w-[min(100%,72rem)]"
+            sizes="(max-width: 768px) 100vw, min(72rem, 100vw)"
+          />
           <h1 className="text-[1.65rem] font-semibold tracking-tight text-[var(--fimass-navy)] md:text-4xl md:tracking-tight">
             Benvenuto in FIMASS
           </h1>
