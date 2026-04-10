@@ -5,6 +5,8 @@ type AreaCard = {
   href: string;
   logoSrc: string;
   logoAlt: string;
+  logoWidth: number;
+  logoHeight: number;
 };
 
 const AREAS: AreaCard[] = [
@@ -14,6 +16,8 @@ const AREAS: AreaCard[] = [
     href: "https://landing-page-fimass.vercel.app/",
     logoSrc: "/fimass-assicurativo.svg",
     logoAlt: "FIMASS Assicurativo",
+    logoWidth: 1746,
+    logoHeight: 187,
   },
   {
     description:
@@ -21,6 +25,8 @@ const AREAS: AreaCard[] = [
     href: "https://www.sportelloamicoimpresa.info/area_finanziamenti/login.php",
     logoSrc: "/fimass-finanziario.svg",
     logoAlt: "FIMASS Finanziario",
+    logoWidth: 1494,
+    logoHeight: 187,
   },
 ];
 
@@ -55,22 +61,30 @@ export default function Home() {
           className="mx-auto grid w-full max-w-[min(100%,38rem)] shrink-0 gap-3 sm:max-w-4xl md:grid-cols-2 md:gap-4"
           aria-label="Aree di accesso"
         >
-          {AREAS.map(({ href, description, logoSrc, logoAlt }) => (
+          {AREAS.map(
+            ({
+              href,
+              description,
+              logoSrc,
+              logoAlt,
+              logoWidth,
+              logoHeight,
+            }) => (
             <article
               key={href}
-              className="flex aspect-[4/3] min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:px-5 md:py-4"
+              className="flex h-full min-h-0 w-full min-w-0 flex-col items-center gap-3 overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-3 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:gap-3.5 md:px-4 md:py-3.5"
             >
-              <div className="flex w-full shrink-0 justify-center bg-transparent">
+              <div className="flex w-full shrink-0 justify-center px-0.5">
                 <Image
                   src={logoSrc}
                   alt={logoAlt}
-                  width={2000}
-                  height={604}
-                  className="h-auto max-h-[4.75rem] w-full max-w-[min(100%,19rem)] object-contain object-center md:max-h-[5.75rem] md:max-w-[22rem]"
-                  sizes="(max-width: 768px) 19rem, 22rem"
+                  width={logoWidth}
+                  height={logoHeight}
+                  className="h-auto w-full max-w-full object-contain object-center"
+                  sizes="(max-width: 640px) calc(100vw - 2.5rem), (max-width: 896px) calc(50vw - 2rem), 22rem"
                 />
               </div>
-              <p className="flex min-h-0 w-full flex-1 items-center justify-center px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
+              <p className="w-full px-0.5 text-sm leading-snug text-[var(--muted)] md:text-[0.9375rem]">
                 {description}
               </p>
               <a
@@ -78,7 +92,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Accedi — ${logoAlt}`}
-                className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2 text-sm font-medium text-white shadow-md outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:bg-[var(--fimass-navy-light)] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
+                className="group mt-auto inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2 text-sm font-medium text-white shadow-md outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:bg-[var(--fimass-navy-light)] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
               >
                 Accedi
                 <span
@@ -89,7 +103,8 @@ export default function Home() {
                 </span>
               </a>
             </article>
-          ))}
+          ),
+          )}
         </section>
       </main>
 
