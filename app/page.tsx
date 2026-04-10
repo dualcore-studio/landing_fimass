@@ -80,7 +80,7 @@ export default function Home() {
                   </span>
                 </h2>
               </div>
-              <div className="flex shrink-0 flex-col items-center gap-1.5">
+              <div className="flex shrink-0 flex-col items-center gap-4 md:gap-5">
                 <p className="w-full max-w-sm px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
                   {description}
                 </p>
