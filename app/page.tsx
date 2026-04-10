@@ -72,20 +72,22 @@ export default function Home() {
             }) => (
             <article
               key={href}
-              className="flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-3 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:px-4 md:py-4"
+              className="flex aspect-[4/3] min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:px-5 md:py-4"
             >
               <div className="flex min-h-0 flex-1 flex-col items-center justify-center px-0.5">
-                <Image
-                  src={logoSrc}
-                  alt={logoAlt}
-                  width={logoWidth}
-                  height={logoHeight}
-                  className="h-auto w-full max-w-full object-contain object-center"
-                  sizes="(max-width: 640px) calc(100vw - 2.5rem), (max-width: 896px) calc(50vw - 2rem), 22rem"
-                />
+                <div className="flex h-[3rem] w-full items-center justify-center md:h-[3.5rem]">
+                  <Image
+                    src={logoSrc}
+                    alt={logoAlt}
+                    width={logoWidth}
+                    height={logoHeight}
+                    className="max-h-full w-auto max-w-full object-contain object-center"
+                    sizes="(max-width: 640px) calc(100vw - 2.5rem), (max-width: 896px) calc(50vw - 2rem), 22rem"
+                  />
+                </div>
               </div>
-              <div className="flex shrink-0 flex-col items-center gap-2 pt-2 md:gap-2.5 md:pt-3">
-                <p className="w-full px-0.5 text-sm leading-snug text-[var(--muted)] md:text-[0.9375rem]">
+              <div className="flex shrink-0 flex-col items-center gap-1.5">
+                <p className="w-full px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
                   {description}
                 </p>
                 <a
