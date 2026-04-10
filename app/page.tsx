@@ -1,32 +1,29 @@
 import Image from "next/image";
 
 type AreaCard = {
+  titleLine: string;
+  titleAccent: string;
   description: string;
   href: string;
-  logoSrc: string;
-  logoAlt: string;
-  logoWidth: number;
-  logoHeight: number;
+  linkLabel: string;
 };
 
 const AREAS: AreaCard[] = [
   {
+    titleLine: "PORTALE FIMASS",
+    titleAccent: "Assicurativo",
     description:
-      "Accedi al gestionale per i servizi assicurativi per richiedere preventivi e polizze assicurative",
+      "Preventivi, polizze e pratiche assicurative in un’unica area riservata.",
     href: "https://landing-page-fimass.vercel.app/",
-    logoSrc: "/fimass-assicurativo.svg",
-    logoAlt: "FIMASS Assicurativo",
-    logoWidth: 1746,
-    logoHeight: 187,
+    linkLabel: "PORTALE FIMASS Assicurativo",
   },
   {
+    titleLine: "PORTALE FIMASS",
+    titleAccent: "Finanziario",
     description:
-      "Accedi al gestionale per richiedere mutui, prestiti personali e finanziamenti",
+      "Mutui, prestiti e finanziamenti con strumenti dedicati e supporto operativo.",
     href: "https://www.sportelloamicoimpresa.info/area_finanziamenti/login.php",
-    logoSrc: "/fimass-finanziario.svg",
-    logoAlt: "FIMASS Finanziario",
-    logoWidth: 1494,
-    logoHeight: 187,
+    linkLabel: "PORTALE FIMASS Finanziario",
   },
 ];
 
@@ -65,36 +62,33 @@ export default function Home() {
             ({
               href,
               description,
-              logoSrc,
-              logoAlt,
-              logoWidth,
-              logoHeight,
+              titleLine,
+              titleAccent,
+              linkLabel,
             }) => (
             <article
               key={href}
               className="flex aspect-[4/3] min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:px-5 md:py-4"
             >
-              <div className="flex min-h-0 flex-1 flex-col items-center justify-center px-0.5">
-                <div className="flex h-[3rem] w-full items-center justify-center md:h-[3.5rem]">
-                  <Image
-                    src={logoSrc}
-                    alt={logoAlt}
-                    width={logoWidth}
-                    height={logoHeight}
-                    className="max-h-full w-auto max-w-full object-contain object-center"
-                    sizes="(max-width: 640px) calc(100vw - 2.5rem), (max-width: 896px) calc(50vw - 2rem), 22rem"
-                  />
-                </div>
+              <div className="flex min-h-0 flex-1 flex-col items-center justify-center px-1">
+                <h2 className="max-w-[16rem] text-balance sm:max-w-none">
+                  <span className="block text-[0.6875rem] font-semibold uppercase leading-tight tracking-[0.14em] text-[var(--muted)] sm:text-xs md:text-[0.8125rem]">
+                    {titleLine}
+                  </span>
+                  <span className="mt-1 block bg-gradient-to-r from-[var(--fimass-navy)] via-[var(--fimass-accent)] to-[var(--fimass-gold)] bg-clip-text text-lg font-bold uppercase tracking-tight text-transparent sm:text-xl md:text-2xl">
+                    {titleAccent}
+                  </span>
+                </h2>
               </div>
               <div className="flex shrink-0 flex-col items-center gap-1.5">
-                <p className="w-full px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
+                <p className="w-full max-w-sm px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
                   {description}
                 </p>
                 <a
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Accedi — ${logoAlt}`}
+                  aria-label={`Accedi — ${linkLabel}`}
                   className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2 text-sm font-medium text-white shadow-md outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:bg-[var(--fimass-navy-light)] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
                 >
                   Accedi
