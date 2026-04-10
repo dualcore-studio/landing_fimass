@@ -33,14 +33,14 @@ export default function Home() {
 
       <main className="relative z-10 flex flex-1 flex-col px-5 pb-10 pt-12 md:px-10 md:pt-16">
         <header className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-          <div className="relative mb-10 h-14 w-full max-w-[min(100%,20rem)] md:mb-12 md:h-[4.25rem] md:max-w-[22rem]">
+          <div className="relative mb-10 h-[4.5rem] w-full max-w-[min(100%,28rem)] md:mb-12 md:h-[6.5rem] md:max-w-[34rem]">
             <Image
               src="/fimass-logo.svg"
               alt="FIMASS"
               fill
               className="object-contain object-center"
               priority
-              sizes="(max-width: 768px) 320px, 352px"
+              sizes="(max-width: 768px) 448px, 544px"
             />
           </div>
           <h1 className="text-[1.65rem] font-semibold tracking-tight text-[var(--fimass-navy)] md:text-4xl md:tracking-tight">
@@ -56,15 +56,12 @@ export default function Home() {
           aria-label="Aree di accesso"
         >
           {AREAS.map(({ href, title, description, Icon }) => (
-            <a
+            <article
               key={href}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex flex-col rounded-2xl border border-slate-200/90 bg-white/90 p-7 shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-slate-300/90 hover:bg-white hover:shadow-[0_20px_40px_-12px_rgba(15,39,68,0.12),0_8px_16px_-8px_rgba(15,39,68,0.08)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] md:p-8"
+              className="flex flex-col items-center rounded-2xl border border-slate-200/90 bg-white/90 p-7 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:p-8"
             >
               <span
-                className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-slate-50 text-[var(--fimass-accent)] transition-colors duration-300 group-hover:bg-[rgba(45,106,143,0.08)] md:mb-6"
+                className="mb-5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-[var(--fimass-accent)] md:mb-6"
                 aria-hidden
               >
                 <Icon className="h-5 w-5" />
@@ -75,7 +72,12 @@ export default function Home() {
               <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
                 {description}
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--fimass-accent)] transition-transform duration-300 group-hover:gap-3">
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-3 text-sm font-medium text-white shadow-md outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:bg-[var(--fimass-navy-light)] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
+              >
                 Accedi
                 <span
                   className="inline-block transition-transform duration-300 group-hover:translate-x-0.5"
@@ -83,8 +85,8 @@ export default function Home() {
                 >
                   →
                 </span>
-              </span>
-            </a>
+              </a>
+            </article>
           ))}
         </section>
       </main>
