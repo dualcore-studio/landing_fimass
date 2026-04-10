@@ -26,33 +26,33 @@ const AREAS: AreaCard[] = [
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-full flex-1 flex-col">
+    <div className="relative flex h-dvh flex-col overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(45,106,143,0.12),transparent),linear-gradient(180deg,#f4f6f9_0%,#eef1f6_100%)]"
         aria-hidden
       />
 
-      <main className="relative z-10 flex flex-1 flex-col px-5 pb-10 pt-4 md:px-10 md:pt-6">
-        <header className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
+      <main className="relative z-10 flex flex-1 flex-col items-center justify-center gap-4 px-5 py-4 md:gap-5 md:px-10 md:py-5">
+        <header className="flex w-full flex-col items-center text-center">
           <Image
             src="/fimass-logo.svg"
             alt="FIMASS"
             width={1808}
             height={713}
             priority
-            className="mb-1 h-auto w-full max-w-[min(100%,58rem)] object-contain object-center md:mb-1.5 md:max-w-[min(100%,72rem)]"
-            sizes="(max-width: 768px) 100vw, min(72rem, 100vw)"
+            className="mb-1 h-auto w-full max-w-[28rem] object-contain md:mb-2 md:max-w-[36rem] lg:max-w-[42rem]"
+            sizes="(max-width: 768px) 28rem, (max-width: 1024px) 36rem, 42rem"
           />
-          <h1 className="text-[1.65rem] font-semibold tracking-tight text-[var(--fimass-navy)] md:text-4xl md:tracking-tight">
+          <h1 className="text-xl font-semibold tracking-tight text-[var(--fimass-navy)] md:text-3xl lg:text-4xl">
             Benvenuto in FIMASS
           </h1>
-          <p className="mt-2 max-w-xl text-base leading-relaxed text-[var(--muted)] md:mt-3 md:text-lg">
-            Seleziona l’area di accesso di tuo interesse
+          <p className="mt-1 max-w-xl text-sm leading-relaxed text-[var(--muted)] md:mt-2 md:text-base">
+            Seleziona l&apos;area di accesso di tuo interesse
           </p>
         </header>
 
         <section
-          className="mx-auto mt-8 grid w-full max-w-4xl flex-1 gap-6 md:mt-10 md:grid-cols-2 md:gap-8 md:items-stretch"
+          className="grid w-full max-w-4xl gap-4 md:grid-cols-2 md:gap-6"
           aria-label="Aree di accesso"
         >
           {AREAS.map(({ href, description, logoSrc, logoAlt }) => (
@@ -61,25 +61,21 @@ export default function Home() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center rounded-2xl border border-slate-200/90 bg-white/90 p-7 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-slate-200 hover:shadow-[0_12px_40px_-8px_rgba(15,39,68,0.14),0_4px_12px_-2px_rgba(15,39,68,0.06)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] md:p-8"
+              className="group flex flex-col items-center rounded-2xl border border-slate-200/90 bg-white/90 px-6 py-5 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-slate-200 hover:shadow-[0_12px_40px_-8px_rgba(15,39,68,0.14),0_4px_12px_-2px_rgba(15,39,68,0.06)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] md:px-7 md:py-6"
             >
-              <div className="mb-6 flex w-full justify-center md:mb-7">
-                <div className="h-36 w-full max-w-[min(100%,24rem)] rounded-xl p-4 md:h-44 md:max-w-[28rem] md:p-5">
-                  <div className="relative h-full w-full">
-                    <Image
-                      src={logoSrc}
-                      alt={logoAlt}
-                      fill
-                      className="object-contain object-center"
-                      sizes="(max-width: 768px) 352px, 416px"
-                    />
-                  </div>
-                </div>
+              <div className="relative mb-3 h-20 w-full max-w-[18rem] md:mb-4 md:h-24 md:max-w-[22rem]">
+                <Image
+                  src={logoSrc}
+                  alt={logoAlt}
+                  fill
+                  className="object-contain object-center"
+                  sizes="(max-width: 768px) 18rem, 22rem"
+                />
               </div>
               <p className="flex-1 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
                 {description}
               </p>
-              <span className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-3 text-sm font-medium text-white shadow-md transition-all duration-300 ease-out group-hover:bg-[var(--fimass-navy-light)] group-hover:shadow-lg">
+              <span className="mt-4 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2.5 text-sm font-medium text-white shadow-md transition-all duration-300 ease-out group-hover:bg-[var(--fimass-navy-light)] group-hover:shadow-lg">
                 Accedi
                 <span
                   className="inline-block transition-transform duration-300 group-hover:translate-x-0.5"
@@ -93,7 +89,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="relative z-10 mt-auto border-t border-slate-200/80 bg-white/50 py-6 text-center text-xs text-[var(--muted)] backdrop-blur-sm md:text-sm">
+      <footer className="relative z-10 border-t border-slate-200/80 bg-white/50 py-3 text-center text-xs text-[var(--muted)] backdrop-blur-sm md:py-4 md:text-sm">
         <p>© FIMASS - Tutti i diritti riservati</p>
       </footer>
     </div>
