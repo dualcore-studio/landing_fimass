@@ -32,7 +32,7 @@ export default function Home() {
         aria-hidden
       />
 
-      <main className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center gap-1.5 px-5 py-1 md:gap-2 md:px-10 md:py-2">
+      <main className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center gap-6 px-5 py-1 md:gap-8 md:px-10 md:py-2">
         <header className="flex w-full shrink-0 flex-col items-center text-center">
           <Image
             src="/fimass-hero.svg"
@@ -61,7 +61,7 @@ export default function Home() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex aspect-square min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-4 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-slate-200 hover:shadow-[0_12px_40px_-8px_rgba(15,39,68,0.14),0_4px_12px_-2px_rgba(15,39,68,0.06)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] md:px-5 md:py-5"
+              className="group flex aspect-[4/3] min-h-0 w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-slate-200 hover:shadow-[0_12px_40px_-8px_rgba(15,39,68,0.14),0_4px_12px_-2px_rgba(15,39,68,0.06)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] md:px-5 md:py-4"
             >
               <div className="flex w-full shrink-0 justify-center bg-transparent">
                 <Image
@@ -69,7 +69,7 @@ export default function Home() {
                   alt={logoAlt}
                   width={2000}
                   height={604}
-                  className="h-auto max-h-[3.75rem] w-full max-w-[16rem] object-contain object-center md:max-h-[4.25rem] md:max-w-[18rem]"
+                  className="h-auto max-h-[3.25rem] w-full max-w-[15rem] object-contain object-center md:max-h-[3.75rem] md:max-w-[17rem]"
                   sizes="(max-width: 768px) 16rem, 18rem"
                 />
               </div>
