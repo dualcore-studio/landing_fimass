@@ -69,8 +69,8 @@ export default function Home() {
                   alt={logoAlt}
                   width={2000}
                   height={604}
-                  className="h-auto max-h-[3.25rem] w-full max-w-[15rem] object-contain object-center md:max-h-[3.75rem] md:max-w-[17rem]"
-                  sizes="(max-width: 768px) 16rem, 18rem"
+                  className="h-auto max-h-[4.75rem] w-full max-w-[min(100%,19rem)] object-contain object-center md:max-h-[5.75rem] md:max-w-[22rem]"
+                  sizes="(max-width: 768px) 19rem, 22rem"
                 />
               </div>
               <p className="flex min-h-0 w-full flex-1 items-center justify-center px-0.5 text-sm leading-relaxed text-[var(--muted)] md:text-[0.9375rem]">
