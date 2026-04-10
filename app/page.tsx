@@ -72,9 +72,9 @@ export default function Home() {
             }) => (
             <article
               key={href}
-              className="flex h-full min-h-0 w-full min-w-0 flex-col items-center gap-3 overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-3 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:gap-3.5 md:px-4 md:py-3.5"
+              className="flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 px-3 py-3 text-center shadow-[0_4px_24px_-4px_rgba(15,39,68,0.08),0_1px_3px_rgba(15,39,68,0.04)] md:px-4 md:py-4"
             >
-              <div className="flex w-full shrink-0 justify-center px-0.5">
+              <div className="flex min-h-0 flex-1 flex-col items-center justify-center px-0.5">
                 <Image
                   src={logoSrc}
                   alt={logoAlt}
@@ -84,24 +84,26 @@ export default function Home() {
                   sizes="(max-width: 640px) calc(100vw - 2.5rem), (max-width: 896px) calc(50vw - 2rem), 22rem"
                 />
               </div>
-              <p className="w-full px-0.5 text-sm leading-snug text-[var(--muted)] md:text-[0.9375rem]">
-                {description}
-              </p>
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Accedi — ${logoAlt}`}
-                className="group mt-auto inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2 text-sm font-medium text-white shadow-md outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:bg-[var(--fimass-navy-light)] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
-              >
-                Accedi
-                <span
-                  className="inline-block transition-transform duration-300 group-hover:translate-x-0.5"
-                  aria-hidden
+              <div className="flex shrink-0 flex-col items-center gap-2 pt-2 md:gap-2.5 md:pt-3">
+                <p className="w-full px-0.5 text-sm leading-snug text-[var(--muted)] md:text-[0.9375rem]">
+                  {description}
+                </p>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Accedi — ${logoAlt}`}
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--fimass-navy)] px-6 py-2 text-sm font-medium text-white shadow-md outline-none ring-[var(--fimass-accent)] transition-all duration-300 ease-out hover:bg-[var(--fimass-navy-light)] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
                 >
-                  →
-                </span>
-              </a>
+                  Accedi
+                  <span
+                    className="inline-block transition-transform duration-300 group-hover:translate-x-0.5"
+                    aria-hidden
+                  >
+                    →
+                  </span>
+                </a>
+              </div>
             </article>
           ),
           )}
